@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-
+import Header from './Components/Header'
 import Main from "./Pages/Main";
 import React,{ Component } from "react";
 import Profile from "./Pages/Profile";
@@ -16,12 +16,18 @@ function App(){
 
         return(
            <Router>
-                   <Route path="/">
-                       <Main />
-                   </Route>
-                   <Route path="/profile/:id">
+               <Header />
+               <Switch>
+                    <Route  path="/">
+                        <Main />
+                    </Route>
+                    <Route path="/profile/:id">
                        <Profile />
-                   </Route>
+                    </Route>
+
+               </Switch>
+
+                   
            </Router>
         )
 

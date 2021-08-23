@@ -1,9 +1,10 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from 'react'
 import axios from "axios";
+
 import { useParams } from "react-router-dom";
 function Userinfo(props){
     let { id } = useParams()
-    const [pro,setpro] =useState()
+    const [pro,setPro] =useState()
     console.log(props);
     useEffect(async ()=>{
         axios.get('http://localhost:5001/u/user/${props.uid}')
@@ -16,11 +17,11 @@ function Userinfo(props){
             })
     })
     return (
-        <>
+        <section>
             <div>
 
             </div>
-        </>
+        </section>
     )
 }
 export default Userinfo

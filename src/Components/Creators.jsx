@@ -1,24 +1,36 @@
-import { useEffect,useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from 'axios';
-function Creators(){
-    const [pro,setpro] =useState([])
+
+
+const Creators = () => {
+    const [pro,setPro] =useState([])
     useEffect(async ()=>{
         axios.get('http://localhost:5001/profilepic')
             .then( res =>{
                 //console.log(res);
-                setpro(res.data);
+
+                setPro(res.data);
+                console.log(pro);
             })
             .catch( err =>{
                 console.log(err);
             })
     })
     return (
-        <>
-            {pro.map(e => <div>
-                <div>{e.username}</div>
-                <div><img src={e.UserProfilePic}/></div>
-            </div>)}
-        </>
+        <div className='top-creators'>
+            <h3 className='sub-heading'>Top Creators</h3>
+
+            {/* Profile Cards */}
+
+            <div id='userGridContainer' className='grid-container container'>
+
+                {/* Card Component */}
+                {pro.map(e => <a href='#' className='grid-item user-card'>
+                        <img src={e.UserProfilePic} className='creator-dp' alt='Profile Picture' />
+                        <b className='user-name'>{e.username}</b>
+                    </a>)}
+            </div>
+        </div>
     )
 }
 export default Creators
