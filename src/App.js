@@ -1,14 +1,13 @@
-import logo from './logo.svg';
+
 import Header from './Components/Header'
 import Main from "./Pages/Main";
-import React,{ Component } from "react";
+import React from "react";
 import Profile from "./Pages/Profile";
 //import Main from "./Pages/Main";
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 
 

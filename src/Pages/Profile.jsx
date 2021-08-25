@@ -4,14 +4,20 @@ import { useParams } from "react-router-dom";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Userinfo from "../Components/Userinfo";
-function Profile(){
+
+
+const Profile = () => {
+
+
    let { id } = useParams()
 
    console.log(id);
    return (
-   <section>
+   <Component>
       {id}
    <Userinfo uid={id}/>
-   </section>)
+   </Component>)
 }
+
+
 export default Profile

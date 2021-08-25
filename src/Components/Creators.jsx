@@ -7,7 +7,7 @@ const Creators = () => {
     useEffect(async ()=>{
         axios.get('http://localhost:5001/profilepic')
             .then( res =>{
-                //console.log(res);
+                console.log(res);
 
                 setPro(res.data);
                 console.log(pro);
@@ -15,7 +15,7 @@ const Creators = () => {
             .catch( err =>{
                 console.log(err);
             })
-    })
+    }, [])
     return (
         <div className='top-creators'>
             <h3 className='sub-heading'>Top Creators</h3>
@@ -25,7 +25,7 @@ const Creators = () => {
             <div id='userGridContainer' className='grid-container container'>
 
                 {/* Card Component */}
-                {pro.map(e => <a href='#' className='grid-item user-card'>
+                {pro.map(e => <a href='#nothing' className='grid-item user-card'>
                         <img src={e.UserProfilePic} className='creator-dp' alt='Profile Picture' />
                         <b className='user-name'>{e.username}</b>
                     </a>)}

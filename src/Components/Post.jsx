@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 
 import { useEffect,useState} from "react";
 import axios from 'axios';
@@ -20,8 +20,8 @@ const Post = () => {
         <div className='nft-feed'>
             <h3 className='sub-heading'>Recently Minted</h3>
             <div id='NFTGridContainer' className='grid-container'>
-                {pro.map(e => <a href='#' target='_blank' className='grid-item feed-card unclickable'>
-                    <img src={e.imageURLs} alt='image' />
+                {pro.map(e => <a href='#will' target='_blank' className='grid-item feed-card unclickable'>
+                    <img src={e.imageURLs} alt='Nothing here' />
 
                     {/* A div with card details to hold the details in the card */}
                     <div className='card-details'>

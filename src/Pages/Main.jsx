@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import { useEffect,useState} from "react";
-import axios from 'axios';
+import React from "react";
+
+
 
 import Creators from "../Components/Creators";
 import Post from "../Components/Post";
