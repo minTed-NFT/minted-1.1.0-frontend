@@ -13,10 +13,9 @@ const Profile = () => {
 
    console.log(id);
    return (
-   <Component>
-      {id}
-   <Userinfo uid={id}/>
-   </Component>)
+   <div>
+      <h1>This is a sample Profile Page with ID: {id}</h1>
+   </div>)
 }
 
 

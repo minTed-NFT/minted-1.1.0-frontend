@@ -1,8 +1,9 @@
 
-import Header from './Components/Header'
+import Header from '../src/Components/common/Header'
 import Main from "./Pages/Main";
 import React from "react";
 import Profile from "./Pages/Profile";
+import Nft from "./Pages/NFT";
 //import Main from "./Pages/Main";
 import {
     BrowserRouter as Router,
@@ -17,12 +18,16 @@ function App(){
            <Router>
                <Header />
                <Switch>
-                    <Route  path="/">
+                    <Route exact path="/">
                         <Main />
                     </Route>
-                    <Route path="/profile/:id">
+                    <Route path="/u/:id">
                        <Profile />
                     </Route>
+                    <Route path="/nft/:id">
+                       <Nft />
+                    </Route>
+
 
                </Switch>
 
