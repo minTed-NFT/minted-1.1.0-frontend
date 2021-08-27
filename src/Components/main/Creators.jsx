@@ -33,8 +33,8 @@ const Creators = () => {
             <div id='userGridContainer' className='grid-container container'>
 
                 {/* Card Component */}
-                {pro.map(e => <a href='/u/5' className='grid-item user-card'>
-                        <img src={e.UserProfilePic} className='creator-dp' alt='Profile Picture' />
+                {pro.map(e => <a href={`u/${e.username}`} className='grid-item user-card'>
+                        <img src={e.UserProfilePic} className='creator-dp' alt={`${e.username}`} />
                         <b className='user-name'>{e.username}</b>
                     </a>)}
             </div>

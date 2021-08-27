@@ -5,26 +5,21 @@ import axios from "axios";
 
 const Featured = () => {
     const [data, setData] = useState([])
-    let featuredData = []
     
-
-
-    useEffect(async() => {
+    const getData = async() => {
         let response = await axios.get('http://localhost:5001/featured')
         .then(res => {
-            // console.log(res.data);
-            // featuredData = [...res.data]
-            // console.log(featuredData);
+            
             console.log(res.data);
             setData(res.data)
-            console.log(data);
             
         })    
         .catch(err => console.log(err));
-        
-        
-        // setData(crap_data)
-        // console.log(data);
+    }
+
+    useEffect(() => {
+
+        getData()
 
     }, [])
 

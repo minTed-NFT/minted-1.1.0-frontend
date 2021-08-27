@@ -8,7 +8,7 @@ const Header = () => {
             <nav className="navbar navbar-custom">
 
                 {/* Minted Brand Logo Left */}
-                <a href="https://minted.ist" style={{float: 'left'}}><img src={MintedBrand} alt='brand' id='brand'/></a>
+                <a href="/" style={{float: 'left'}}><img src={MintedBrand} alt='brand' id='brand'/></a>
 
                 {/* Search Box */}
                 <div className='search'>

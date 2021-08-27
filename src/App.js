@@ -21,7 +21,7 @@ function App(){
                     <Route exact path="/">
                         <Main />
                     </Route>
-                    <Route path="/u/:id">
+                    <Route path="/u/:username">
                        <Profile />
                     </Route>
                     <Route path="/nft/:id">
