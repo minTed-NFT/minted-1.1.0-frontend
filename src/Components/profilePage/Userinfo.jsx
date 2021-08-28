@@ -5,14 +5,35 @@ import axios from "axios";
 const Userinfo = (props) => {
     const {username} = props
     const [info, setInfo] = useState({})
+    const [NFT, setNFT] = useState([])
+
+    let publicKey=''
+
+
+    const getNFTs = async(pub) => {
+        let response = await axios.get(`http://localhost:5001/unfts/${pub}`)
+        .then(res => {
+            console.log('testig NFTs')
+            console.log(res);
+            setNFT(res.data)
+        })
+    }
+
 
 
     const getData = async(username) => {
         let response = await axios.get(`http://localhost:5001/u/${username}`)
         .then(res => {
             console.log('testing');
+            console.log(res.data);
             setInfo(res.data)
-        })
+            publicKey = res.data.public_key
+            console.log(publicKey);
+        }).then(() => {
+            getNFTs(publicKey)
+        }
+            
+        )
         .catch(err => console.log(err))
     }
     
@@ -37,6 +58,12 @@ const Userinfo = (props) => {
                 <div className='bio-description'>{info.description}</div>
                 <a className='bitclout-redirection' href={info.bitclout_link} target='_blank'>View Profile</a> 
                 
+            </div>
+
+            <div>
+                {NFT.map(single => {
+                    return <img class= 'width-test' src={single.ImageURL} alt={single.LikeCount} />
+                })}
             </div>
         </div>
     )
