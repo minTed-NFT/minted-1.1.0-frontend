@@ -24,7 +24,7 @@ function App(){
                     <Route path="/u/:username">
                        <Profile />
                     </Route>
-                    <Route path="/nft/:id">
+                    <Route path="/nft/:postHashHex">
                        <Nft />
                     </Route>
 
