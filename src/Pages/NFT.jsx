@@ -64,25 +64,27 @@ const Nft = () => {
                             </li>
                         </ul>
                         
-                        <div class="tab-content" id="pills-tabContent">
+                        <div className="tab-content" id="pills-tabContent">
                         
-                            <div class="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
+                            <div className="tab-pane fade show active" id="details" role="tabpanel" aria-labelledby="details-tab">
                                 <div class="details">{data.body}</div>
                         
                             </div>
                         
-                            <div class="tab-pane fade" id="bidders" role="tabpanel" aria-labelledby="bidders-tab">
+                            <div className="tab-pane fade" id="bidders" role="tabpanel" aria-labelledby="bidders-tab">
+        
                                 <table>
                                     <tr>
                                         <th>Bidder</th>
                                         <th>Bid Price</th>
                                     </tr>
-                                    {data.NFTDataBids.map(each => {
+                                    {data.NFTDataBids.map(singleBid => {
+                                    
                                         return (
-                                            <tr>
-                                        <td> {data.BiderName}</td>
-                                        <td>{data.BidAmount$Clout}</td>
-                                    </tr>
+                                        <tr>
+                                            <td> {singleBid.BiderName}</td>
+                                            <td>{singleBid.BidAmount$Clout}</td>
+                                        </tr>
                                         );
                                     })}
                                     
@@ -95,14 +97,9 @@ const Nft = () => {
                         </div>
 
                     </div>
+                      
                     
-                    
-                    
-                    
-                    
-                    
-
-                   <a id="bitclout-redirection" href={data.BitcloutLink}>Buy</a>
+                   <a id="bitclout-redirection" href={data.BitcloutLink} target='_blank'>Buy</a>
             </div>
         </div>
     </main>
