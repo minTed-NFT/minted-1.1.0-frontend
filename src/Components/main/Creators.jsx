@@ -29,7 +29,7 @@ const Creators = () => {
             <h3 className='sub-heading'>Top Creators</h3>
 
             {/* Profile Cards */}
-
+            
             <div id='userGridContainer' className='grid-container container'>
 
                 {/* Card Component */}

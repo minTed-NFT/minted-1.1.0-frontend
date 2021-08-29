@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 
 const Nft = () => {
     const {postHashHex} = useParams()
-    const [data, setData] = useState({})
+    const [data, setData] = useState({NFTDataBids : []})
     const [isLoading, setIsLoading] = useState(true)
 
     const getData = async(postHashHex) => {
