@@ -29,7 +29,7 @@ const Featured = () => {
             <div id='FeaturedGridContainer' className='grid-container'>
                 {data.map( e => {
                     const {ImageURL, LikeCount, HighestBidNanos} = e
-                    return <a href='#nothingnow' target='_blank' className='grid-item featured-card'>
+                    return <a href={e.NFTPageLink} target='_blank' className='grid-item featured-card'>
                         
                         <img src={ImageURL} alt='NFT Image' />
 
