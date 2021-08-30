@@ -1,14 +1,14 @@
-import logo from './logo.svg';
 
+import Header from '../src/Components/common/Header'
 import Main from "./Pages/Main";
-import React,{ Component } from "react";
+import React from "react";
 import Profile from "./Pages/Profile";
+import Nft from "./Pages/NFT";
 //import Main from "./Pages/Main";
 import {
     BrowserRouter as Router,
     Switch,
-    Route,
-    Link
+    Route
 } from "react-router-dom";
 
 
@@ -16,12 +16,22 @@ function App(){
 
         return(
            <Router>
-                   <Route path="/">
-                       <Main />
-                   </Route>
-                   <Route path="/profile/:id">
+               <Header />
+               <Switch>
+                    <Route exact path="/">
+                        <Main />
+                    </Route>
+                    <Route path="/u/:username">
                        <Profile />
-                   </Route>
+                    </Route>
+                    <Route path="/nft/:postHashHex">
+                       <Nft />
+                    </Route>
+
+
+               </Switch>
+
+                   
            </Router>
         )
 
