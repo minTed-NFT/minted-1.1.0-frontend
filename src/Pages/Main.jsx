@@ -1,15 +1,25 @@
-import { useEffect,useState} from "react";
-import axios from 'axios';
-import Creators from "../Components/Creators";
-import Post from "../Components/Post";
-function Main(){
+import React from "react";
 
-    return(<>
-        <h1>Creators</h1>
-        <Creators />
-        <h1>Post</h1>
-        <Post />
-    </>)
+
+
+import Creators from "../Components/main/Creators";
+import Post from "../Components/main/Post";
+import Banner from '../Components/main/Banner'
+import Featured from '../Components/main/Featured'
+const Main = ()=> {
+
+
+    console.log('I am working');
+    return (
+    <main id='home-parent'>
+        <div className='container' id='home'>
+            <Banner />
+            <Featured />
+            <Creators />
+            <Post />
+        </div>
+    </main>
+    )
 
 }
 

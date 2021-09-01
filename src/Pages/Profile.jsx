@@ -1,12 +1,17 @@
+import React from 'react'
+
 import { useParams } from "react-router-dom";
-import {useEffect, useState} from "react";
-import axios from "axios";
-import Userinfo from "../Components/Userinfo";
-function Profile(){
-   let { id } = useParams()
-   return(<>
-      {id}
-   <Userinfo uid={id}/>
-   </>)
+
+import UserInfo from '../Components/profilePage/Userinfo'
+
+
+const Profile = () => {
+   let {username} = useParams()
+   return <main>
+      <UserInfo username = {username} />
+
+   </main>
 }
+
+
 export default Profile
