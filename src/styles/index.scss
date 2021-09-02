@@ -2,3 +2,42 @@
     @import '../styles/profile.scss';
     @import '../styles/homepage.scss';
     @import '../styles/nft.scss';
+
+    /* Variables */
+:root {
+    --button-gradient: linear-gradient(
+      101.12deg,
+      #eb1484 27.35%,
+      #c91cc3 99.99%,
+      #c81cc5 100%,
+      #c81cc5 100%
+    );
+  }
+  
+  /* Styles the Scroll Bar */
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #2d2e36;
+    border-radius: 50px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--button-gradient);
+    border-radius: 50px;
+  }
+  
+  body {
+    background-color: #24252d;
+    color: white;
+    font-family: "Inter", sans-serif;
+  }
+
+  .sub-heading {
+    display: block;
+    margin-top: 4rem;
+    font-size: 25px;
+    font-weight: 700;
+  }
