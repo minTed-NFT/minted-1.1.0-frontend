@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 
-const getNFTs = async(pub, sorting) => {
+const getNFTs = async(pub) => {
     let response = await axios.get(`http://localhost:5001/unfts/${pub}`)
     .then(res => {
         console.log('testig NFTs')

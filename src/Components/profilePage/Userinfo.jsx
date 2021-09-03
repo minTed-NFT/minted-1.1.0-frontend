@@ -24,9 +24,9 @@ const Userinfo = (props) => {
             publicKey = res.data.public_key
             console.log(publicKey);
         }).then(async(res) => {
-            let test = await getNFTs(publicKey, sorting);
-            console.log(test);
-            setNFT(test)
+            let nfts = await getNFTs(publicKey);
+            console.log(nfts);
+            setNFT(nfts)
             
         }
             
@@ -58,6 +58,8 @@ const Userinfo = (props) => {
             </div>
 
             <div>
+                
+
                 {NFT.map(single => {
                     return <img class= 'width-test' src={single.ImageURL} alt={single.LikeCount} />
                 })}
