@@ -3,6 +3,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import { List, ListItem, ListItemText} from '@material-ui/core'
 
+
 class SearchBar extends React.Component {
     constructor(props) {
         super(props)
@@ -15,6 +16,7 @@ class SearchBar extends React.Component {
         }
     }
     handleChange=async(event)=>{
+
         this.setState({
             searchKey:event.target.value
         })
@@ -29,6 +31,13 @@ class SearchBar extends React.Component {
                               
         })    
           .catch(err => console.log(err));
+        if (this.state.searchKey===''){
+            this.setState({
+                searchResults:[]
+            })
+        }
+
+    
          
     }
 
@@ -50,10 +59,12 @@ class SearchBar extends React.Component {
                                 onChange={this.handleChange} 
                             />
                           
-                            {this.state.searchResults.map((result, index) => (                            
+                            {(this.state.searchResults).map((result, index) => (                            
                               <List >
                                 <ListItem button>
+                                <a href={result.profilePage}>
                                 <ListItemText primary={result.username} />
+                                </a>
                                 </ListItem>
                               </List>
                               ))}

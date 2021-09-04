@@ -15,12 +15,14 @@ const Main = ()=> {
         <div className='container' id='home'>
             <Banner />
             <Featured />
+            
             <Creators />
+            <Post />
       
         </div>
     </main>
     )
 
 }
-//      <Post />
+//      
 export default Main
