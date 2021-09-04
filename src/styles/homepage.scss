@@ -1,37 +1,7 @@
 /* font-family: 'Inter', sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* Variables */
-:root {
-  --button-gradient: linear-gradient(
-    101.12deg,
-    #eb1484 27.35%,
-    #c91cc3 99.99%,
-    #c81cc5 100%,
-    #c81cc5 100%
-  );
-}
 
-/* Styles the Scroll Bar */
-::-webkit-scrollbar {
-  width: 15px;
-}
-
-::-webkit-scrollbar-track {
-  background: #2d2e36;
-  border-radius: 50px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--button-gradient);
-  border-radius: 50px;
-}
-
-body {
-  background-color: #24252d;
-  color: white;
-  font-family: "Inter", sans-serif;
-}
 
 /* Turns About Tab and Contact Tab Disabled */
 /* .about-tab,
@@ -66,12 +36,7 @@ img#brand {
   padding-left: 5rem;
 }
 
-.sub-heading {
-  display: block;
-  margin-top: 4rem;
-  font-size: 25px;
-  font-weight: 700;
-}
+
 
 /* Styles related to the card */
 

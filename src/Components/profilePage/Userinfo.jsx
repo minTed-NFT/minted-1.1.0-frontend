@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import getNFTs from "./NFTGallery";
 import axios from "axios";
 
 
@@ -6,18 +7,11 @@ const Userinfo = (props) => {
     const {username} = props
     const [info, setInfo] = useState({})
     const [NFT, setNFT] = useState([])
-
+    let sorting='nothing'
     let publicKey=''
 
 
-    const getNFTs = async(pub) => {
-        let response = await axios.get(`http://localhost:5001/unfts/${pub}`)
-        .then(res => {
-            console.log('testig NFTs')
-            console.log(res);
-            setNFT(res.data)
-        })
-    }
+        
 
 
 
@@ -29,8 +23,11 @@ const Userinfo = (props) => {
             setInfo(res.data)
             publicKey = res.data.public_key
             console.log(publicKey);
-        }).then(() => {
-            getNFTs(publicKey)
+        }).then(async(res) => {
+            let nfts = await getNFTs(publicKey);
+            console.log(nfts);
+            setNFT(nfts)
+            
         }
             
         )
@@ -61,6 +58,8 @@ const Userinfo = (props) => {
             </div>
 
             <div>
+                
+
                 {NFT.map(single => {
                     return <img class= 'width-test' src={single.ImageURL} alt={single.LikeCount} />
                 })}
