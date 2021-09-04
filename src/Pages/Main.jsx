@@ -3,7 +3,7 @@ import React from "react";
 
 
 import Creators from "../Components/main/Creators";
-import Post from "../Components/main/Post";
+import NFT from "../Components/main/NFT";
 import Banner from '../Components/main/Banner'
 import Featured from '../Components/main/Featured'
 const Main = ()=> {
@@ -16,7 +16,7 @@ const Main = ()=> {
             <Banner />
             <Featured />
             <Creators />
-            <Post />
+            <NFT />
         </div>
     </main>
     )
