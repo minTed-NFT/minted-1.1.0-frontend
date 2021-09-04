@@ -15,12 +15,16 @@ const Main = ()=> {
         <div className='container' id='home'>
             <Banner />
             <Featured />
+            
             <Creators />
+
+    
             <NFT />
+
         </div>
     </main>
     )
 
 }
-
+//      
 export default Main
