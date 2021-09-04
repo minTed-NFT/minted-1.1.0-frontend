@@ -16,11 +16,11 @@ const Main = ()=> {
             <Banner />
             <Featured />
             <Creators />
-            <Post />
+      
         </div>
     </main>
     )
 
 }
-
+//      <Post />
 export default Main
