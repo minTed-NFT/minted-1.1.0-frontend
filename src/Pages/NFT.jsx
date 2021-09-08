@@ -27,7 +27,7 @@ const Nft = () => {
 
     return (
     <main className="container">
-        <div className="grid-container">
+        <div className="nft-grid-container">
             <img src={data.imageURLs } alt="NFT" className="grid-item NFT-image" />
 
             <div className="grid-item NFT-details">

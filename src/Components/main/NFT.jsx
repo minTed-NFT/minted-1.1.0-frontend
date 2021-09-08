@@ -49,7 +49,7 @@ const NFT = () => {
                 <option value="likes" defaultValue>Most Liked</option>
                 <option value="DiamondCount">Most Diamonded</option>
                 <option value="biddersCount">No. of Bidders</option>
-                <option value="Lowest Priced">Lowest Priced</option>
+                {/* <option value="Lowest Priced">Lowest Priced</option> */}
                 <option value="time">Recent</option>
             </select>
             <div id='NFTGridContainer' className='grid-container'>
@@ -60,7 +60,7 @@ const NFT = () => {
                     <div className='card-details'>
                         <span className='tag likes'>👍 {e.likes}</span>
 
-                        <span className='tag price'>{e.HighestBidAmount}  CLOUT</span>  {/* Not working */}
+                        <span className='tag price'>{e.HighestBidAmount.toFixed(3)}  CLOUT</span>  {/* Not working */}
                     </div>
                 </a>)}
 

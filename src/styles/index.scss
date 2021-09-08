@@ -1,7 +1,14 @@
-    
-    @import '../styles/profile.scss';
-    @import '../styles/homepage.scss';
-    @import '../styles/nft.scss';
+//THIS FILE CONTAINS THE CSS STYLINGS COMMON FOR ALL THE PAGES
+
+
+@import '../styles/profile.scss';
+@import '../styles/homepage.scss';
+@import '../styles/nft.scss';
+
+    /* font-family: 'Inter', sans-serif; */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
 
     /* Variables */
 :root {
@@ -14,7 +21,7 @@
     );
   }
   
-  /* Styles the Scroll Bar */
+                                                                                        // CSS RELATED TO SCROLLBAR
   ::-webkit-scrollbar {
     width: 15px;
   }
@@ -35,9 +42,102 @@
     font-family: "Inter", sans-serif;
   }
 
+
+
+                                                                                        // CSS RELATED TO NAVBAR
+
+
+  .navbar {
+    background-color: #24252d;
+  }
+  
+  .navbar a {
+    height: 100%;
+  }
+
+  .banner-head {
+    position: relative;
+  }
+  
+  /* Colors Related to Nav Links */
+  .nav-pills > li > a.enabled.active,
+  .nav-pills > li > a.home-tab:hover {
+    color: white;
+    background: transparent;
+    border-radius: 10px;
+  }
+  
+  .nav-pills > li > a.disabled.active,
+  .nav-pills > li > a.disabled:hover {
+    color: #4f4f4f;
+  }
+  
+  .nav-pills > li > a {
+    color: rgb(253, 252, 252);
+  }
+
+  #contact-button {
+    color: #eb1484;
+    border: 2px;
+    border-style: solid;
+    border-color: #eb1484;
+    border-radius: 1rem;
+  }
+  
+                                                                /* SEARCH BAR CSS */
+
+.search-bar {
+  background-color: #1b1a21;
+  padding-left: 10px;
+  border-radius: 0.5rem;
+}
+.search input[type="text"] {
+  width: 40vw;
+  height: 2em;
+  border-radius: 0.5rem;
+  border: none;
+
+  /* padding-left: 10px; */
+  background-color: #1b1a21;
+  color: rgb(255, 255, 255);
+}
+
+.search input[type="text"]:focus {
+  outline: none;
+}
+.search {
+  float: right;
+  margin: 7px;
+}
+
+
+::placeholder {
+  padding-left: 5px;
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+
+
+
   .sub-heading {
     display: block;
     margin-top: 4rem;
     font-size: 25px;
     font-weight: 700;
   }
+
+  a:hover {
+    text-decoration: none;
+  }
+  
