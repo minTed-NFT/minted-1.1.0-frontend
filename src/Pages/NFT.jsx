@@ -28,7 +28,7 @@ const Nft = () => {
     return (
     <main className="container">
         <div className="nft-grid-container">
-            <img src={data.imageURLs } alt="NFT" className="grid-item NFT-image" />
+            <img src={data.imageURLs } alt="NFT" className="nft-grid-item NFT-image" />
 
             <div className="grid-item NFT-details">
 
@@ -52,6 +52,8 @@ const Nft = () => {
                     🔁 {data.reclouts}
                 </div>
 
+                <i class="fas fa-retweet"></i>
+
                 <div id="details-offers">
                         <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                             <li className="nav-item">
@@ -74,6 +76,8 @@ const Nft = () => {
                             <div className="tab-pane fade" id="bidders" role="tabpanel" aria-labelledby="bidders-tab">
         
                                 <table>
+
+                                    
                                     <tr>
                                         <th>Bidder</th>
                                         <th>Bid Price</th>
