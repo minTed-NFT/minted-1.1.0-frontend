@@ -49,10 +49,10 @@ const Header = () => {
 				        identityWindow.close()
 				        setlogin(true)
 				    console.log(user)
-    					data = { 'publickey' : user }
+    					data = { 'publickey' : usernow }
     					console.log('this is data-axios')
     					console.log(data)
-    					axios.post('http://localhost:5001/userlogin', data)
+    					axios.get(`http://localhost:5001/userlog/${usernow}`)
                     }
             }
             }
@@ -63,6 +63,9 @@ const Header = () => {
     }
     const launchLogout = () => {
     		setlogin(false)
+    		setuserdp('')
+    		setuser('a')
+    		
     		}
     
 
@@ -106,8 +109,7 @@ const Header = () => {
                     <li><a className='nav-link disabled' href="#about" data-toggle='tab'>My Items</a></li>
                     <li><a className='nav-link disabled'href="#following" data-toggle='tab'>Following</a></li>
                     <li><a className='nav-link' id='contact-button' href='mailto: support@minted.ist'>Contact</a></li>
-                    <li>You've loggedIn</li>
-                    <li><img src={userdp}/></li>
+                     <li><a className='nav-link disabled' id='dp' href='#'><img style={{height:50,width:50}} src={userdp}/></a></li>
                     <li><a className='nav-link' href='#create' data-toggle='tab' onClick={launchLogout}>Logout</a></li>
                 </ul>
             </nav>
