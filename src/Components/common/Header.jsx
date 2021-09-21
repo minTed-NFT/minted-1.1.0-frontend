@@ -49,10 +49,18 @@ const Header = () => {
 					identityWindow.close()
 					setlogin(true)
 					//console.log(user)
-    					data = { 'publickey' : usernow }
-    					//console.log('this is data-axios')
+					let payload = { publickey : usernow }
+    					console.log('this is data-axios')
     					//console.log(data)
-    					axios.get(`http://localhost:5001/userlog/${usernow}`)
+						axios.post('http://localhost:5001/userlog',payload,{
+							headers: {
+								'Content-Type': 'application/json'
+							}})
+						.then(res => {
+						 console.log(res);
+						 console.log(res.data);
+					   }).catch((err)=> {})
+						   
 					}
 				}
 			}
