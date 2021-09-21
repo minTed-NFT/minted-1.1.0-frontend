@@ -19,12 +19,12 @@ const Main = ()=> {
             <Creators />
 
     
-            <NFT />
+            
 
         </div>
     </main>
     )
 
 }
-//      
+//      <NFT />
 export default Main
